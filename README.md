@@ -1,5 +1,5 @@
 # Senso
-![DSP-in-python](https://socialify.git.ci/puldavid87/DSP-in-python/image?description=1&descriptionEditable=Senso%20is%20a%20Project%20of%20Digital%20signal%20processing%20which%20is%20used%20to%20detect%20illegal%20logging%20of%20trees%20in%20forest&language=1&theme=Light)
+<img src="public/DSP-in-python.jpeg" width="100%">
 
 # About the project
 * Deforestation is one of the most significant problems our generation faces across the world. Deforestation is directly linked to climate change as burning down organic material releases a lot of carbon dioxide, a greenhouse gas. Forests are cut down throughout the world to make space for agricultural fields and housing. Intentional fires are put to clear out the forest and illegal logging happens on an international scale. Thus to encounter this problem we have come with a project named Senso, Senso is a project based on Digital Signal Processing, Our project aims to acumulate sound from the surrounding and check if it matches with the already availabe dataset of chainsaw or any other electronic equipment with which cutting of tree takes place.
