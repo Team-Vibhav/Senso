@@ -11,14 +11,3 @@
 * We have set a threashold that is 0.8, if the corrlation value is above it we will notify the forest official about the place and can send them a detailed report of the graphs of time domain and frequency domain as evidence of the logging.
 * Website link: https://calm-tor-31753.herokuapp.com
 
-# Sounds considered
-
-|   **Sound**             | **Type**                                                     |
-|-------------------------|--------------------------------------------------------------|
-| Chainsaw                | wav                                                          |
-| Bird                    | wav                                                          |
-| Dog                     | wav                                                          |
-| Forestfire              | wav                                                          |
-| Rooster                 | wav                                                          |
-| Rain                    | wav                                                          |
-| Electricity             | wav                                                          |
