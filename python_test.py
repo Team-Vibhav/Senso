@@ -99,11 +99,11 @@ plt.figure()
 # plt.show()
 
 
-# plt.xcorr(P1_Orig,P1)
-# plt.xlabel('frq')
-# plt.ylabel('peak')
-# plt.savefig('public/graph/'+sound+'.png')
-# plt.figure()
+plt.xcorr(P1_Orig,P1)
+plt.xlabel('frq')
+plt.ylabel('peak')
+plt.savefig('public/fig5.png')
+plt.figure()
 # # plt.show()
 
 # a = P1**2
