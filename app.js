@@ -4,9 +4,11 @@ const { static, request } = require('express');
 const https = require('https');
 //Import PythonShell module.
 const { PythonShell } = require('python-shell');
+const upload = require('express-fileupload');
 
 const app = express();
 app.use(express.static('public'));
+app.use(upload());
 app.use(bodyParser.urlencoded({extended:true}));
 app.set('view engine','ejs');
 
@@ -18,7 +20,35 @@ app.get('/', function (req, res) {
 
 app.post('/', function (req, res) {
   console.log(req.body);
-  var selected_File = req.body.song;
+  ans(req.body.song,res);
+
+  // res.send(result.toString())
+  // res.send("received");
+
+  
+});
+
+app.post('/upload', function (req, res) {
+console.log('In post');
+if(req.files){
+   console.log(req.files);
+   var file = req.files.file;
+   var filename = file.name;
+   console.log(filename);
+   file.mv('./public/userFile.wav', function (err){
+     if(err){
+       res.send(err);
+     }
+     else{
+       ans('userFile.wav', res);
+     }
+   });
+}
+
+});
+
+function ans(audioFile, res) {
+  var selected_File = audioFile;
 
   let options = {
     mode: 'text',
@@ -39,12 +69,7 @@ app.post('/', function (req, res) {
 
     res.render('graph.ejs',{userName:selected_File , corrValue:result.toString() , userNameImage:Image});
   });
-
-  // res.send(result.toString())
-  // res.send("received");
-
-  
-});
+}
 
 app.listen(8080, function () {
   console.log('listening on port 8080!');

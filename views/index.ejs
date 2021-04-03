@@ -11,7 +11,7 @@
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
     <title>Senso</title>
-    <link rel="tree icon" type="image/png" href="tree.png"/>
+    <link rel="tree icon" type="image/png" href="tree.png" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Roboto&display=swap');
@@ -52,8 +52,10 @@
         .card {
             opacity: 0.8;
             /* color: transparent !important; */
-            margin-top: 10px;
+            margin: 20 auto; 
             border: 2px solid black;
+            float: none; /* Added */
+            margin-bottom: 20px;
 
         }
 
@@ -349,6 +351,25 @@
                         <form action="/" method="POST">
                             <input type="hidden" name="song" value="Chainsaw1.wav">
                             <button type="submit" class="btn btn-success d-block mx-auto mt-2">Correlate</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-lg-6 col-md-12 mx-auto">
+                <div class="card bg-warning">
+                    <div class="card-body ">
+                        <h5 class="card-title text-center">Upload your audio file</h5>
+                        <p class="card-text text-center">Format should be .wav</p>
+                        <!-- <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <input type="file" name="file">
+                            <button type="submit" class="btn btn-success d-block mx-auto mt-2">Upload</button>
+                        </form> -->
+                        <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="file" class="form-control" id="customFile" name="file"/>
+                                <button type="submit" class="btn btn-success d-block mx-auto mt-2">Upload</button>
+                            </div>
                         </form>
                     </div>
                 </div>
